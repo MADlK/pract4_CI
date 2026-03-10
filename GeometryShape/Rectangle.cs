@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GeometryShape
 {
-    public class Rectangle
+    public class Rectangle: Shape
     {
         private double _width;
         public double Width 
@@ -36,11 +36,11 @@ namespace GeometryShape
         }
 
 
-        public double Area ()
+        public override double Area ()
         {
             return _width * _height;
         }
-        public double Perimeter ()
+        public override double Perimeter ()
         {
             return _height + _width;
         }

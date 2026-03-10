@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GeometryShape
 {
-    public class Triangle
+    public  class Triangle: Shape
     {
         private double _sideA;
         public double SideA 
@@ -44,12 +44,12 @@ namespace GeometryShape
                 return true;
             return false;
         }
-        public double Area ()
+        public override double Area ()
         {
             double p = Perimeter() / 2;
             return Math.Sqrt(p*(p-_sideA)* (p - _sideB)* (p - _sideC));
         }
-        public double Perimeter ()
+        public override double Perimeter ()
         {
             return _sideA+_sideB+-_sideC;
         }
@@ -58,5 +58,5 @@ namespace GeometryShape
         {
             return $"Площадь: {Area()}, периметер: {Perimeter()}";
         }
-    }
+}
 }
